@@ -1,5 +1,5 @@
-import { useGetLessonsQuery } from "../../graphql/generated";
-import Lesson from "../Lesson"
+import { useGetLessonsQuery } from '../../graphql/generated';
+import Lesson from '../Lesson';
 
 function Sidebar() {
   const { data } = useGetLessonsQuery();
@@ -13,7 +13,7 @@ function Sidebar() {
         {data?.lessons.map(lesson => (
           <Lesson
             key={lesson.id}
-            title={lesson.title} 
+            title={lesson.title}
             slug={lesson.slug}
             availableAt={new Date(lesson.availableAt)}
             type={lesson.lessonType}
@@ -21,7 +21,7 @@ function Sidebar() {
         ))}
       </div>
     </aside>
-  )
+  );
 }
 
-export default Sidebar
+export default Sidebar;
