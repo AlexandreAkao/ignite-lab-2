@@ -1,11 +1,19 @@
 import { useGetLessonsQuery } from '../../graphql/generated';
 import Lesson from '../Lesson';
 
-function Sidebar() {
+interface ISidebarProps {
+  isOpenMenu: boolean;
+}
+
+function Sidebar({ isOpenMenu }: ISidebarProps) {
   const { data } = useGetLessonsQuery();
 
   return (
-    <aside className="w-[348px] bg-gray-700 p-6 border-l border-gray-600">
+    <aside
+      className={`z-50 min-h-screen md:h-auto fixed md:static right-0 w-[348px] bg-gray-700 p-6 border-l border-gray-600 md:block ${
+        !isOpenMenu ? 'sm:hidden' : ''
+      }`}
+    >
       <span className="font-bold text-2xl pb-6 mb-6 border-b border-gray-500 block">
         Cronograma de aulas
       </span>

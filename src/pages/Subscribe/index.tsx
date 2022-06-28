@@ -24,11 +24,11 @@ function Subscribe() {
 
   return (
     <div className="min-h-screen bg-blur bg-cover bg-no-repeat flex flex-col items-center">
-      <div className="w-full max-w-[1100px] flex items-center justify-between mt-20 mx-auto">
-        <div className="max-w-[640px]">
+      <div className="md:flex-row flex-col w-full max-w-[1100px] flex items-center justify-between mt-20 mx-auto">
+        <div className="p-6 max-w-[640px] md:items-start flex flex-col items-center">
           <Logo />
 
-          <h1 className="mt-8 text-[2.5rem] leading-tight">
+          <h1 className="mt-8 text-[2.5rem] leading-tight text-center md:text-left">
             Construa uma <strong className="text-blue-500">aplicação completa</strong>, do zero, com{' '}
             <strong className="text-blue-500">React</strong>
           </h1>
@@ -38,7 +38,7 @@ function Subscribe() {
           </p>
         </div>
 
-        <div className="p-8 bg-gray-700 border border-gray-500 rounded">
+        <div className="md:w-auto w-full p-8 bg-gray-700 border border-gray-500 rounded">
           <strong className="text-2xl mb-6 block">Inscreva-se gratuitamente</strong>
 
           <form onSubmit={handleSubscribe} className="flex flex-col gap-2 w-full">
