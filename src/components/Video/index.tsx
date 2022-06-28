@@ -5,10 +5,6 @@ import { useGetLessonBySlugQuery } from '../../graphql/generated';
 
 import '@vime/core/themes/default.css';
 
-interface IVideoProps {
-  lessonSlug: string;
-}
-
 function Video({ lessonSlug }: IVideoProps) {
   const { data } = useGetLessonBySlugQuery({
     variables: {

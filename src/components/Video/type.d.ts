@@ -1,0 +1,3 @@
+interface IVideoProps {
+  lessonSlug: string;
+}

@@ -1,0 +1,3 @@
+type EventParams = {
+  slug: string;
+};

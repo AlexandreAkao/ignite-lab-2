@@ -5,12 +5,8 @@ import Header from '../../components/Header';
 import Sidebar from '../../components/Sidebar';
 import Video from '../../components/Video';
 
-type Params = {
-  slug: string;
-};
-
 function Event() {
-  const { slug } = useParams<Params>();
+  const { slug } = useParams<EventParams>();
   const [isOpenMenu, setIsOpenMenu] = useState(false);
 
   return (

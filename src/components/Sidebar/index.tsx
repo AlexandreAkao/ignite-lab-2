@@ -1,10 +1,6 @@
 import { useGetLessonsQuery } from '../../graphql/generated';
 import Lesson from '../Lesson';
 
-interface ISidebarProps {
-  isOpenMenu: boolean;
-}
-
 function Sidebar({ isOpenMenu }: ISidebarProps) {
   const { data } = useGetLessonsQuery();
 

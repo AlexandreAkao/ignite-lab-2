@@ -4,13 +4,6 @@ import ptBR from 'date-fns/locale/pt-BR';
 import { Link, useParams } from 'react-router-dom';
 import classnames from 'classnames';
 
-interface LessonProps {
-  title: string;
-  slug: string;
-  availableAt: Date;
-  type: 'live' | 'class';
-}
-
 function Lesson({ title, slug, availableAt, type }: LessonProps) {
   const { slug: paramsSlug } = useParams<{ slug: string }>();
   const isLessonAvailable = isPast(availableAt);
